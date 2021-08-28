@@ -33,17 +33,14 @@ fn main() {
 
         let value = ((r + g + b) / 3) as f32; // Average brightness value. Can also do lightness/luminosity
 
-        let mut value_index: usize = ((value / 255.0) * value_chars.len() as f32).round() as usize;
-        if value_index == value_chars.len() {
-            value_index -= 1;
-        }
+        let value_index: usize = (((value / 255.0) * value_chars.len() as f32).round() as usize).clamp(0, value_chars.len());
         ascii_pixels.push(value_chars_bytes[value_index] as char);
     }
 
     // Print ASCII
     for (i, c) in ascii_pixels.iter().enumerate() {
         print!("{}{}{}", c, c, c);
-        if i > 0 && i % width == 0 {
+        if (i + 1) % width == 0 {
             println!();
         }
     }
