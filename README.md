@@ -2,7 +2,7 @@
 
 This is a simple project written recreational purposes. It converts an image to ASCII text. It's made in Rust.
 
-It works by iterating over the pixels of a given image, calculating the brightness value for each pixel's RGB color and mapping this value to a string of available ASCII characters.
+It works by iterating over the pixels of a given image, calculating the brightness value for each pixel's RGB color and mapping this value to a character in a string of available ASCII characters.
 
 ![Before](demo_before.jpg)
 ![After](demo_after.png)
