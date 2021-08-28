@@ -9,7 +9,7 @@ It works by iterating over the pixels of a given image, calculating the brightne
 
 ## Usage
 
-Build with `cargo build` or preferably `cargo build --release`.
+Build with `cargo build` or preferably `cargo build --release`
 
 `img2ascii <FILE_NAME> [SHRINK_FACTOR]`
 
